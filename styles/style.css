@@ -106,7 +106,7 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  margin:0;
+  margin: 0;
   padding-bottom: 30px;
 }
 
@@ -143,18 +143,12 @@
 }
 
 .table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 1100px;
   margin: 0 auto;
-}
-
-.table__row {
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Можно ли писать так? */
-.table__row_pb1 {
-  margin-bottom: 60px;
 }
 
 .table__cell {
@@ -162,8 +156,12 @@
   z-index: 1;
 }
 
+.table__cell:nth-child(-n+4) {
+  margin-bottom: 60px;
+}
+
 .table__heading {
-  margin:0;
+  margin: 0;
   padding-bottom: 20px;
   line-height: 1.15em;
   font-size: 24px;
@@ -176,13 +174,13 @@
   font-size: 18px;
 }
 
-.table__span_pt {
+.table__text span {
   display: block;
   padding-top: 20px;
 }
 
 .feynman {
-  position: relative;;
+  position: relative;
   background-color: #f2f2f2;
   height: 890px;
   background-image: url(../images/feynman.png);
@@ -243,8 +241,8 @@
   width: 200px;
 }
 
-.table__row_pb2 {
-  padding-bottom: 80px;
+.table__cell_theme_dark:nth-child(-n+5) {
+  margin-bottom: 80px;
 }
 
 .kaufman__triangle {
@@ -259,8 +257,10 @@
 }
 
 .footer {
+  display: flex;
   min-height: 350px;
   background-color: #1f1f1f;
+  padding: 60px 0 40px 0;
 }
 
 .footer__columns {
@@ -270,24 +270,46 @@
   justify-content: space-between;
 }
 
+.footer__column {
+  color: white;
+}
+
 .footer__column_content_copyright {
   flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer__author {
-  color: white;
+  margin: 0;
+  padding: 18px 0;
   line-height: 25px;
   font-size: 18px;
 }
 
-.footer__column_heading {
+.footer__column-heading {
+  margin: 0;
+  padding-bottom: 20px;
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
 }
 
+.footer__column-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .footer__column-link {
+  color: white;
+  text-decoration: none;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+}
+
+.footer__column-links img {
+  padding-right: 10px;
 }
