@@ -1,3 +1,17 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 20s infinite linear;
+}
+
 .page {
   min-width: 1100px;
   max-width: 1600px;
@@ -13,12 +27,18 @@
   position: relative;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .logo {
   z-index: 2;
   width: 228px;
   height: 32px;
+  transition: opacity .4s ease;
+}
+
+.logo:hover {
+  opacity: 0.6;
 }
 
 .logo_place_header {
@@ -55,6 +75,11 @@
 .header__link {
   text-decoration: none;
   color: #2f80ed;
+  transition: opacity .4s ease;
+}
+
+.header__link:hover {
+  opacity: 0.6;
 }
 
 .header__main-illustration {
@@ -115,6 +140,83 @@
 
 .two-columns__span-accent {
   font-weight: 600;
+}
+
+.techniques {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.cards {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 920px;
+}
+
+.cards__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+  margin-right: 100px;
+  margin-bottom: 60px;
+}
+
+.cards__item:nth-child(3) {
+  margin-right: 0;
+}
+
+.cards__image {
+  padding: 60px 40px 43px;
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+}
+
+.cards__title {
+  margin: 0;
+  padding-bottom: 16px;
+  line-height: 1.15em;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cards__description {
+  margin: 0;
+  text-align: center;
+  line-height: 23px;
+  font-size: 18px;
+}
+
+.video__iframes {
+  position: relative;
+  bottom: -50px;
+  margin: 0 auto;
+  padding: 0;
+  width: 1050px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  height: 316px;
+}
+
+.video__iframe {
+  width: 515px;
+  height: 100%;
+  margin: 0;
+}
+
+.oakley {
+  display: flex;
+  justify-content: center;
+  padding: 160px 0 100px;
+  background-color: #f2f2f2;
 }
 
 .digits {
@@ -179,6 +281,7 @@
   background-image: url(../images/feynman.png);
   background-position: left bottom;
   background-repeat: no-repeat;
+  margin-bottom: 100px;
 }
 
 .feynman__title {
@@ -208,6 +311,83 @@
   font-size: 36px;
   text-decoration: none;
   color: #2f80ed;
+  transition: opacity .4s ease;
+}
+
+.feynman__link:hover {
+  opacity: 0.6;
+}
+
+.khan {
+  padding-top: 100px;
+  background-color: #f2f2f2;
+  overflow: hidden;
+}
+
+.khan__container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.khan__author {
+  margin: 0;
+  line-height: 42px;
+  font-size: 30px;
+}
+
+.khan__title {
+  margin: 0;
+  line-height: 1.15em;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.khan__quote {
+  width: 790px;
+  line-height: 34px;
+  font-size: 24px;
+  padding: 50px 0 36px;
+  margin: 0;
+}
+
+.khan__quote-author {
+  margin: 0;
+  line-height: 1.15em;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.khan__quote-author-subline {
+  padding: 10px 0 68px;
+  margin: 0;
+  line-height: 1.15em;
+  font-size: 24px;
+}
+
+.khan__book-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.khan__book-pic {
+  position: relative;
+  width: 620px;
+  height: 608px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.khan__buy-link {
+  margin-left: 48px;
+  line-height: 42px;
+  font-size: 30px;
+  color: #2f80ed;
+  text-decoration: none;
+  transition: opacity .4s ease;
+}
+
+.khan__buy-link:hover {
+  opacity: 0.6;
 }
 
 .kaufman {
@@ -243,6 +423,29 @@
   background-repeat: no-repeat;
   width: 877px;
   height: 877px;
+}
+
+.resources {
+  padding-top: 100px;
+}
+
+.resources__logo-zone {
+  list-style: none;
+  padding: 0;
+  margin: 80px auto 217px;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+}
+
+.resources__link {
+  width: 270px;
+  height: 38px;
+  transition: opacity .4s ease;
+}
+
+.resources__link:hover {
+  opacity: 0.6;
 }
 
 .footer {
@@ -305,6 +508,11 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  transition: opacity .4s ease;
+}
+
+.footer__column-link:hover {
+  opacity: 0.6;
 }
 
 .footer__social-icon {
